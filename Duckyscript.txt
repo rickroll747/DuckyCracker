@@ -1,0 +1,15 @@
+DELAY 100
+REPEAT("END", 10000) {
+    FOR (i, 1, 4) {
+        COMMAND(SPACE)
+        REPEAT(i) {
+            STRING(RANDOM_DIGIT)
+            DELAY 100
+        }
+        ENTER
+        DELAY 1000
+        IF (SUCCESS) {
+            BREAK
+        }
+    }
+}
